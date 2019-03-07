@@ -1,0 +1,8 @@
+<template name="charts">
+<!-- <view class="container">
+  <ec-canvas style='width:100%;height:200px;' id="mychart-dom-ba1r" canvas-id="mychart-bar1" ecs="{{ ecs }}"></ec-canvas>
+</view> -->
+  <!-- <view>
+  图表组件
+  </view> -->
+</template>
