@@ -1,0 +1,9 @@
+<!--componets.wxml-->
+ <view class="container">{{title}}{{selfData}}
+  </view>
+<view class="panel">
+   <view class="hart-with-img"  wx:for="{{charts}}" wx:for-item="chart" wx:key="{{chart.id}}">
+     <image style="width:40rpx;height:40rpx"  src="../../pages/src/assets/images/{{chart.id}}.png" ></image> {{chart.name}}
+  </view>
+</view>
+

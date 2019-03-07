@@ -1,6 +1,7 @@
 {
   "pages":[
     "pages/index/index",
+    "components/bar/bar",
     "pages/logs/logs",
     "pages/template/charts/charts"
   ],

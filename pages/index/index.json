@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "ec-canvas": "../ec-canvas/ec-canvas",
-    "comp":"../components/components"
+    "comp":"../components/components",
+    "bar":"../../components/bar/bar"
   }
 }

@@ -128,7 +128,10 @@ Page({
     ec: {
       onInit: initChart
     },
-    ecs:null
+    charts:[{
+      id:'bar',
+      name:'柱状图'
+    }]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -138,15 +141,13 @@ Page({
   },
   onReady: function () {
     //获得dialog组件
-    this.dialog = this.selectComponent("#dialog");
+    this.dialog = this.selectComponent("#compp");
+    this.bar = this.selectComponent("#bar");
   },
 
   showDialog() {
     this.dialog.showDialog();
-    this.dialog.loadCharts();
-    console.log(typeof this.dialog.data.ecs.onInit);
   },
-
   //取消事件
   _cancelEvent() {
     console.log('你点击了取消');

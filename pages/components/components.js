@@ -1,6 +1,6 @@
 // pages/components.js
 import * as echarts from '../ec-canvas/echarts';
-
+const app = getApp();
 let chart = null;
 function initChart(canvas, width, height) {
   chart = echarts.init(canvas, null, {
@@ -150,9 +150,16 @@ properties: {
 data: {
   // 弹窗显示控制
   isShow: false,
-  ecs: 1
+  currWxml:'comp',
+  ec: {}
 },
-
+  onLoad: function () {
+    this.setData({
+      ec: {
+        onInit: initChart
+      }
+    })
+  },
 /**
  * 组件的方法列表
  * 更新属性和数据的方法与更新页面数据的方法类似
@@ -161,14 +168,6 @@ methods: {
   /*
    * 公有方法
    */
-
-  loadCharts(){
-    this.setData({
-      ecs: {
-        onInit: initChart
-      }
-    })
-  },
   //隐藏弹框
   hideDialog(){
     this.setData({
@@ -177,8 +176,10 @@ methods: {
   },
   //展示弹框
   showDialog(){
+    console.log(app.globalData.currWxml);
     this.setData({
-      isShow: !this.data.isShow
+      isShow: !this.data.isShow,
+      currWxml: app.globalData.currWxml
     })
   },
   /*
